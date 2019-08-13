@@ -12,7 +12,6 @@ exports.upload = function(request, response) {
         response.end();
     });
 }
-
 exports.welcome = function(request, response) {
     console.log("Rozpoczynam obsługę żądania welcome.");
     fs.readFile('./start.html', function(err, html) {
