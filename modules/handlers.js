@@ -15,7 +15,7 @@ exports.upload = function(request, response) {
 
 exports.welcome = function(request, response) {
     console.log("Rozpoczynam obsługę żądania welcome.");
-    fs.readFile('./index.html', function(err, html) {
+    fs.readFile('./start.html', function(err, html) {
         response.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
         response.write(html);
         response.end();
