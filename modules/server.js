@@ -5,7 +5,7 @@ function start() {
   function onRequest(request, response) {
     console.log("Odebrano zapytanie.");
     response.writeHead(200, {"Content-Type": "text/plain"});
-    response.write("Pierwsze koty za płoty");
+    response.write("Pierwsze koty za p�oty");
     response.end();
   }
 
