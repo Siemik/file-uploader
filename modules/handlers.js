@@ -14,11 +14,11 @@ exports.upload = function(request, response) {
 }
 exports.styleHome = function(request, response) {
     console.log("Pobieram style css do srony głównej");
-    fs.readFile("./style.css"), function (err, css) {
+    fs.readFile("./start.css", function (err, css) {
         response.writeHead(200, {"Content-Type": "text/css; charset=utf-8"});
         response.write(css);
         response.end();
-    }
+    });
 }
 
 exports.welcome = function(request, response) {
