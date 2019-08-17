@@ -12,6 +12,15 @@ exports.upload = function(request, response) {
         response.end();
     });
 }
+exports.styleHome = function(request, response) {
+    console.log("Pobieram style css do srony głównej");
+    fs.readFile("./style.css"), function (err, css) {
+        response.writeHead(200, {"Content-Type": "text/css; charset=utf-8"});
+        response.write(css);
+        response.end();
+    }
+}
+
 exports.welcome = function(request, response) {
     console.log("Rozpoczynam obsługę żądania welcome.");
     fs.readFile('./start.html', function(err, html) {
